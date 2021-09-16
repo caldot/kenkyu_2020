@@ -14,7 +14,8 @@ priority shape
 
 // 初期変数定義
 var step = 3; //ステップ数
-var round = 1;
+var nowRound = 1;
+var maxRound = 10;
 var size = 5;
 var isClear = true;
 
@@ -232,17 +233,17 @@ function init_user() {
     }
 
     if(sessionStorage.getItem(["round"]) != null){
-        round = sessionStorage.getItem(["round"])
-        if(round > 10){
+        nowRound = sessionStorage.getItem(["round"])
+        if(nowRound > maxRound){
             window.alert("挑戦回数を超えました");
             location.href = "return.html";
             return;
         }
     }
 
-    window.alert(round + "回目");
-    round ++;
-    sessionStorage.setItem(["round"], round);
+    window.alert(nowRound + "回目");
+    nowRound ++;
+    sessionStorage.setItem(["round"], nowRound);
 
     console.log(pin);
     console.log(pin.length);
