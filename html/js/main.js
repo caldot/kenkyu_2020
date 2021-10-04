@@ -1,16 +1,3 @@
-/*
-サンプルコード
-pin 1, 2, 3, 0
-img sikaku_green
-vector right
-priority shape
-
-*/
-
-/*
-実装済み
-・右図形
-*/
 
 // 初期変数定義
 var step = 3; //ステップ数
@@ -85,7 +72,7 @@ for (var x = 0; x < size; x++) {
             } else {
                 endTime = performance.now();
                 clearTime = endTime - startTime;
-                clearTime = parseInt(clearTime / 1000);
+                clearTime = parseInt(clearTime / 10);
                 sessionStorage.setItem("clearTime", clearTime);
                 sessionStorage.setItem("isClear", isClear);
                 location.href = "result.html";

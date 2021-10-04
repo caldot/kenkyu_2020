@@ -1,9 +1,7 @@
+//判定結果
 var print_result = document.getElementById("result");
-var print_clearTime = document.getElementById("time");
 var isClear = sessionStorage.getItem(["isClear"]);
-var clearTime = sessionStorage.getItem(["clearTime"]);
 console.log(isClear);
-console.log(clearTime);
 if(isClear == "true"){
     print_result.innerText = "Clear";
 }else if(isClear == "false"){
@@ -11,4 +9,9 @@ if(isClear == "true"){
 }else{
     print_result.innerText = "Error";
 }
-print_clearTime.innerText = clearTime;
+
+//測定時間
+var print_clearTime = document.getElementById("time");
+var clearTime = sessionStorage.getItem(["clearTime"]);
+console.log(clearTime);
+print_clearTime.innerText = parseFloat(clearTime + "e-2");
