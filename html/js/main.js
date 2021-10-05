@@ -66,6 +66,7 @@ for (var x = 0; x < size; x++) {
                 if (judge(img_index) != true) {
                     isClear = false;
                 }
+                console.log("isClear: " + isClear);
                 matrix_init();
                 matrix_set();
                 step--;
@@ -85,7 +86,7 @@ for (var x = 0; x < size; x++) {
 
 function judge(img_index) {
     var key_array = array_indexOf(matrix_array, key_img);
-    console.log(key_array[0] + ", " + key_array[1]);
+    console.log("キー画像位置" + key_array[0] + ", " + key_array[1]);
 
     var res;
     switch (mode) {
@@ -139,7 +140,7 @@ function array_indexOf(array, target) { //2次元配列のindexを取得
         }
     }
     return list;
-};
+}
 
 function matrix_init() {  //盤面の初期化
     var list = new Array(size * size);
@@ -159,7 +160,7 @@ function matrix_init() {  //盤面の初期化
         }
     }
 
-    // //debug
+    //debug
     // for (var x = 0; x < size; x++) {
     //     for (var y = 0; y < size; y++) {
     //         matrix_array[x][y] = list[x * size + y];
@@ -209,8 +210,8 @@ function init_user() {
 
         key_img = Number(sessionStorage.getItem("key_img"));
         var shift = Number(sessionStorage.getItem("shift"));
-        var color = Number(sessionStorage.getItem("color"));
-        mode = set_mode(shift, color);
+        var priority = Number(sessionStorage.getItem("priority"));
+        mode = set_mode(shift, priority);
 
 
     } else {
@@ -232,12 +233,13 @@ function init_user() {
     nowRound ++;
     sessionStorage.setItem(["round"], nowRound);
 
-    console.log(pin);
-    console.log(pin.length);
-    console.log(key_img);
-    console.log(mode);
+    console.log("pin: " + pin);
+    //console.log(pin.length);
+    console.log("key: " + key_img);
+    console.log("shift: " + shift + ", priorty: " + priority);
+    console.log("shiftmode: " + mode);
 }
 
-function set_mode(shift, color) {
-    return shift * 2 + color;
+function set_mode(shift, priority) {
+    return shift * 2 + priority;
 }

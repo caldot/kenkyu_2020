@@ -24,7 +24,7 @@ function update_property(){
     sessionStorage.setItem("pin", pin);
     sessionStorage.setItem("key_img", key_img);
     sessionStorage.setItem("shift", shift);
-    sessionStorage.setItem("user", priority);
+    sessionStorage.setItem("priority", priority);
     location.href = "main.html";
 }
 
