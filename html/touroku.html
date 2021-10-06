@@ -18,15 +18,21 @@
         <input type="number" id="pin3" name="pin3" min="0" max="4" value="0"><br><br>
 
         <a>キー画像を設定</a><br>
-        <!- 盤面 ->
+        <!-- 盤面 -->
         <table id="field"></table>
         <input id="key_img" type="number" name="key_img" min="0" max="24" oninput="sliceMaxLength(this, 2)" value="0"><br><br>
 
         <a>シフト方向を設定</a><br>
         <input type="radio" id="right" name="shift" value="0"><label for="right">右方向</label>
+        <!--
         <input type="radio" id="left" name="shift" value="1"><label for="left">左方向</label>
+        -->
         <input type="radio" id="top" name="shift" value="2"><label for="top">上方向</label>
-        <input type="radio" id="down" name="shift" value="3"><label for="down">下方向</label><br><br>
+
+        <!--
+        <input type="radio" id="down" name="shift" value="3"><label for="down">下方向</label>
+        -->
+        <br><br>
 
         <a>優先度の選択</a><br>
         <input type="radio" id="vertex" name="priority" value="0"><label for="vertex">図形優先</label>
