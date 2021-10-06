@@ -14,7 +14,7 @@ if(isClear == "true"){
 var print_clearTime = document.getElementById("time");
 var clearTime = sessionStorage.getItem(["clearTime"]);
 console.log(clearTime);
-print_clearTime.innerText = parseFloat(clearTime + "e-2");
+print_clearTime.innerText = parseFloat(clearTime + "e-3");
 
 /* 
 データの格納"resString"

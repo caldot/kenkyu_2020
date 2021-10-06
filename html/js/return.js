@@ -12,7 +12,7 @@ for(var i=0; i<arrays.length; i++){
 console.log(array);
 var table = document.getElementById("resTable");
 for(var i=0; i<arrays.length; i++){
-    array[i][1] = parseFloat(array[i][1] + "e-2");
+    array[i][1] = parseFloat(array[i][1] + "e-3");
 }
 
 for(var i=0; i<arrays.length; i++){

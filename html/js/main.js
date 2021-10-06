@@ -73,7 +73,7 @@ for (var x = 0; x < size; x++) {
             } else {
                 endTime = performance.now();
                 clearTime = endTime - startTime;
-                clearTime = parseInt(clearTime / 10);
+                clearTime = parseInt(clearTime);
                 sessionStorage.setItem("clearTime", clearTime);
                 sessionStorage.setItem("isClear", isClear);
                 location.href = "result.html";
